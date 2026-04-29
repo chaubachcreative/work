@@ -25,29 +25,29 @@
   --serif: 'DM Serif Display', Georgia, serif;
   --sans: 'Inter', -apple-system, sans-serif;
 }
-html { scroll-behavior: smooth; overflow-x: hidden; }
-body { background: var(--cream); color: var(--charcoal); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-#root { overflow-x: clip; }
+html { scroll-behavior: smooth; width: 100%; max-width: 100%; overflow-x: hidden; }
+body { background: var(--cream); color: var(--charcoal); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; width: 100%; max-width: 100%; overflow-x: hidden; cursor: auto; }
+#root { width: 100%; max-width: 100%; overflow-x: hidden; }
 .pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-top: 28px; align-items: stretch; }
-.comparison-shell { overflow-x: hidden; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; background: #fff; box-shadow: 0 14px 40px rgba(0,0,0,0.04); }
-.comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; font-family: var(--sans); table-layout: fixed; }
-.comparison-row td { transition: background 180ms ease, color 180ms ease, transform 180ms ease; }
-.comparison-section td { background: #F5F5F3; border-top: 1px solid rgba(0,0,0,0.08); border-bottom: 1px solid rgba(0,0,0,0.06); }
+.comparison-shell { width: 100%; max-width: 100%; overflow-x: hidden; }
+.comparison-table { width: 100%; border-collapse: collapse; font-family: var(--sans); table-layout: fixed; }
+.comparison-row td { transition: background 180ms ease, color 180ms ease; }
+.comparison-section td { border-bottom: 1px solid rgba(0,0,0,0.08); }
 @media (hover: hover) and (pointer: fine) {
-  .comparison-row:hover td { background: #FAF7F6 !important; }
-  .comparison-row:hover td:not(:first-child) { color: var(--charcoal) !important; font-weight: 600 !important; }
+  .comparison-row:hover td { background: #F7F4F3 !important; }
+  .comparison-row:hover td:not(:first-child) { color: var(--charcoal) !important; }
   .comparison-row:hover td:first-child { color: var(--charcoal) !important; }
 }
 @media (max-width: 1020px) {
   .pricing-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
 }
 @media (max-width: 767px) {
-  .comparison-shell { border-radius: 10px; overflow-x: hidden; }
+  .comparison-shell { overflow-x: hidden; }
   .comparison-table { table-layout: auto; }
 }
 </style>
 </head>
-<body data-cc-id="cc-1" style="cursor: crosshair;">
+<body>
 <div id="root"></div>
 <script type="text/babel">
 

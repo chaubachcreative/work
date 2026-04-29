@@ -33,7 +33,7 @@ const motionStyles = `
     }
 
     .motion-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       box-shadow: 0 18px 42px rgba(0, 0, 0, 0.08);
       border-color: rgba(0, 0, 0, 0.28) !important;
     }
