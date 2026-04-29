@@ -25,8 +25,26 @@
   --serif: 'DM Serif Display', Georgia, serif;
   --sans: 'Inter', -apple-system, sans-serif;
 }
-html { scroll-behavior: smooth; }
-body { background: var(--cream); color: var(--charcoal); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { background: var(--cream); color: var(--charcoal); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+#root { overflow-x: clip; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-top: 28px; align-items: stretch; }
+.comparison-shell { overflow-x: hidden; border: 1px solid rgba(0,0,0,0.08); border-radius: 12px; background: #fff; box-shadow: 0 14px 40px rgba(0,0,0,0.04); }
+.comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; font-family: var(--sans); table-layout: fixed; }
+.comparison-row td { transition: background 180ms ease, color 180ms ease, transform 180ms ease; }
+.comparison-section td { background: #F5F5F3; border-top: 1px solid rgba(0,0,0,0.08); border-bottom: 1px solid rgba(0,0,0,0.06); }
+@media (hover: hover) and (pointer: fine) {
+  .comparison-row:hover td { background: #FAF7F6 !important; }
+  .comparison-row:hover td:not(:first-child) { color: var(--charcoal) !important; font-weight: 600 !important; }
+  .comparison-row:hover td:first-child { color: var(--charcoal) !important; }
+}
+@media (max-width: 1020px) {
+  .pricing-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+}
+@media (max-width: 767px) {
+  .comparison-shell { border-radius: 10px; overflow-x: hidden; }
+  .comparison-table { table-layout: auto; }
+}
 </style>
 </head>
 <body data-cc-id="cc-1" style="cursor: crosshair;">
@@ -328,7 +346,7 @@ function PricingCards({ cardStyle }) {
         <span style={secLabel}>Packages</span>
         <h2 style={secHeading}>Three offers. Single outcome.</h2>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20, paddingTop: 28, alignItems: "start" }}>
+      <div className="pricing-grid">
         {PACKAGES.map((pkg) => {
           const bg = cardStyle === "cream" ? "var(--cream-deep)" : cardStyle === "outline" ? "transparent" : "var(--white)";
           const border = pkg.popular ? "2px solid var(--terra)" : cardStyle === "outline" ? "1.5px solid rgba(0,0,0,0.5)" : "1.5px solid rgba(0,0,0,0.18)";
@@ -428,8 +446,8 @@ function ComparisonTable() {
         </div>
       }
 
-      <div style={{ overflowX: "auto" }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--sans)" }}>
+      <div className="comparison-shell">
+        <table className="comparison-table">
           {isWide &&
           <thead>
               <tr>
@@ -450,7 +468,7 @@ function ComparisonTable() {
           <tbody>
             {TABLE_DATA.map((section, si) =>
             <React.Fragment key={si}>
-                <tr>
+                <tr className="comparison-section">
                   <td colSpan={isWide ? 4 : 2} style={{
                   padding: si === 0 ? "28px 0 8px" : "36px 0 8px",
                   fontSize: 11, fontWeight: 500, letterSpacing: "0.08em",
@@ -461,18 +479,18 @@ function ComparisonTable() {
                   </td>
                 </tr>
                 {section.rows.map((row, ri) =>
-              <tr key={ri} style={{ borderBottom: "1px solid rgba(28,28,28,0.07)" }}>
-                    <td style={{ padding: "13px 16px 13px 0", fontSize: 14, color: "var(--stone)", width: "36%" }}>{row.label}</td>
+              <tr key={ri} className="comparison-row" style={{ borderBottom: "1px solid rgba(28,28,28,0.07)" }}>
+                    <td style={{ padding: "15px 18px 15px 18px", fontSize: 14, color: "var(--stone)", width: "36%" }}>{row.label}</td>
                     {isWide ? tierIds.map((tid) =>
                 <td key={tid} style={{
-                  padding: "13px 16px", fontSize: 14,
+                  padding: "15px 18px", fontSize: 14,
                   color: row[tid] === "\u2713" ? "var(--charcoal)" : row[tid] === "\u2014" ? "rgba(0,0,0,0.3)" : "var(--charcoal)",
                   background: tid === "momentum" ? "#F5F5F3" : "transparent",
                   fontWeight: tid === "momentum" ? 500 : 400
                 }}>{row[tid]}</td>
                 ) :
                 <td style={{
-                  padding: "13px 0 13px 16px", fontSize: 14,
+                  padding: "15px 18px", fontSize: 14,
                   color: row[activeTier] === "\u2713" ? "var(--charcoal)" : row[activeTier] === "\u2014" ? "rgba(0,0,0,0.3)" : "var(--charcoal)",
                   fontWeight: 500
                 }}>{row[activeTier]}</td>
