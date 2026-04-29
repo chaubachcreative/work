@@ -1,0 +1,676 @@
+<!DOCTYPE html><html lang="en"><head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growth Packages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
+<script type="module" src="/src/main.tsx"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream: #FFFFFF;
+  --cream-deep: #F0F0F0;
+  --terra: #000000;
+  --pink: #E8B8B0;
+  --charcoal: #000000;
+  --stone: #555555;
+  --white: #FFFFFF;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--charcoal); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+</style>
+</head>
+<body data-cc-id="cc-1" style="cursor: crosshair;">
+<div id="root"><nav style="position: fixed; top: 0px; left: 0px; right: 0px; z-index: 100; padding: 0px max(24px, 5vw); height: 60px; display: flex; align-items: center; justify-content: space-between; background: rgba(245, 240, 232, 0.92); backdrop-filter: blur(12px); transition: background 0.3s; border-bottom: 1px solid rgba(28, 28, 28, 0.08);"><span style="font-family: var(--serif); font-size: 18px; color: var(--charcoal);">CHAU BACH</span><a href="#packages" style="font-size: 13px; color: var(--stone); text-decoration: none; font-weight: 500;">Packages</a></nav><main><section style="min-height: 92vh; display: flex; flex-direction: column; justify-content: flex-end; padding: max(100px, 12vh) max(24px, 5vw) max(64px, 8vh); max-width: 1100px; margin: 0px auto;"><div style="max-width: 720px;"><p style="font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 14px; display: block;">Toronto — 2026</p><h1 style="font-family: var(--serif); font-size: clamp(40px, 6vw, 76px); line-height: 1.1; letter-spacing: -0.02em; color: var(--charcoal); margin-bottom: 28px; text-wrap: balance;">Growth packages for movement artists who are tired of posting into the void.</h1><p style="font-size: clamp(16px, 1.8vw, 19px); color: var(--stone); line-height: 1.65; max-width: 560px; margin-bottom: 44px; text-wrap: pretty;">I build brand, content systems, and booking infrastructure for independent instructors, movement artists, and creator-operators in Toronto. Pick the tier that fits where you are.</p><div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;"><a href="https://calendly.com/bachbchau/30-minute-meeting-with-chau-bach?month=2026-04" style="display: inline-block; background: var(--terra); color: var(--cream); font-family: var(--sans); font-size: 15px; font-weight: 500; padding: 14px 28px; border-radius: 8px; text-decoration: none; letter-spacing: 0.01em; cursor: pointer; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;">Book a 20-min fit call</a><a href="#packages" style="display: inline-block; background: transparent; color: var(--charcoal); font-family: var(--sans); font-size: 15px; font-weight: 400; padding: 14px 0px; text-decoration: none; border-bottom: 1px solid var(--charcoal); letter-spacing: 0.01em;">See how we work ↓</a></div></div></section><div style="border-top: 1px solid rgba(28, 28, 28, 0.1); border-bottom: 1px solid rgba(28, 28, 28, 0.1); padding: max(20px, 2.5vh) max(24px, 5vw); background: var(--cream-deep);"><p style="font-family: var(--sans); font-size: 14px; color: var(--stone); line-height: 1.6; max-width: 900px; margin: 0px auto; text-align: center;"></p></div><section id="packages" style="padding: max(80px, 10vh) max(24px, 5vw); max-width: 1100px; margin: 0px auto;"><div style="margin-bottom: 56px;"><span style="font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 14px; display: block;">Packages</span><h2 style="font-family: var(--serif); font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.02em; color: var(--charcoal); line-height: 1.1;">Three tiers. Single outcome.</h2></div><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;"><div style="background: var(--white); border: 1.5px solid rgba(28, 28, 28, 0.2); border-radius: 12px; padding: 36px 32px 32px; display: flex; flex-direction: column; position: relative; transition: transform 0.2s; transform: none;"><div style="margin-bottom: 24px;"><p style="font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 10px;">Starter</p><p style="font-family: var(--serif); font-size: clamp(18px, 2vw, 22px); line-height: 1.3; color: var(--charcoal); text-wrap: balance;">Gotta warm up!</p></div><div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; flex-wrap: wrap;"><span style="font-family: var(--serif); font-size: 48px; letter-spacing: -0.03em; color: var(--charcoal); line-height: 1;">$250</span></div><p style="font-size: 13px; color: var(--stone); margin-bottom: 28px;">1 week</p><ul style="list-style: none; display: flex; flex-direction: column; gap: 11px; margin-bottom: 36px; flex-grow: 1;"><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>Positioning statement + bio rewrite</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>Link-in-bio rebuild with waitlist form</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>3 short-form edits</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>Captions + hashtag pack</li></ul><a href="checkout.html?package=starter" style="display: inline-block; background: transparent; color: var(--charcoal); font-family: var(--sans); font-size: 14px; font-weight: 500; padding: 14px 28px; border-radius: 8px; text-decoration: none; letter-spacing: 0.01em; cursor: pointer; border: 1px solid rgba(28, 28, 28, 0.25); text-align: center;">Choose Starter</a></div><div style="background: var(--white); border: 2px solid var(--terra); border-radius: 12px; padding: 36px 32px 32px; display: flex; flex-direction: column; position: relative; transition: transform 0.2s; transform: none;"><span style="position: absolute; top: -12px; left: 32px; background: var(--terra); color: var(--cream); font-size: 11px; font-weight: 500; letter-spacing: 0.06em; padding: 4px 12px; border-radius: 20px; font-family: var(--sans);">Recommended</span><div style="margin-bottom: 24px;"><p style="font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 10px;">Foundation</p><p style="font-family: var(--serif); font-size: clamp(18px, 2vw, 22px); line-height: 1.3; color: var(--charcoal); text-wrap: balance;">Build your tempo.</p></div><div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; flex-wrap: wrap;"><span style="font-family: var(--serif); font-size: 48px; letter-spacing: -0.03em; color: var(--charcoal); line-height: 1;">$650</span><span style="font-family: var(--serif); font-size: 24px; color: var(--stone); text-decoration: line-through; line-height: 1;">$750</span></div><p style="font-size: 13px; color: var(--stone); margin-bottom: 28px;">6 weeks</p><ul style="list-style: none; display: flex; flex-direction: column; gap: 11px; margin-bottom: 36px; flex-grow: 1;"><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>3-page brand mini-guide</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>4 content pillars documented</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>8 short-form edits + 4 feed posts</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>Waitlist + welcome email setup</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>Wrap report</li></ul><a href="checkout.html?package=foundation" style="display: inline-block; background: var(--terra); color: var(--cream); font-family: var(--sans); font-size: 14px; font-weight: 500; padding: 14px 28px; border-radius: 8px; text-decoration: none; letter-spacing: 0.01em; cursor: pointer; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; text-align: center;">Choose Foundation</a></div><div style="background: var(--white); border: 1.5px solid rgba(28, 28, 28, 0.2); border-radius: 12px; padding: 36px 32px 32px; display: flex; flex-direction: column; position: relative; transition: transform 0.2s; transform: none;"><div style="margin-bottom: 24px;"><p style="font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 10px;">Momentum</p><p style="font-family: var(--serif); font-size: clamp(18px, 2vw, 22px); line-height: 1.3; color: var(--charcoal); text-wrap: balance;">Drills. Drills. Drills.</p></div><div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; flex-wrap: wrap;"><span style="font-family: var(--serif); font-size: 48px; letter-spacing: -0.03em; color: var(--charcoal); line-height: 1;">$1,800</span></div><p style="font-size: 13px; color: var(--stone); margin-bottom: 28px;">90 days</p><ul style="list-style: none; display: flex; flex-direction: column; gap: 11px; margin-bottom: 36px; flex-grow: 1;"><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>Full 8-page brand mini-kit</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>4 content pillars + 90-day calendar</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>12 edits + 9 posts + 6 newsletters</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>Waitlist + welcome email flow</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>Privates booking flow</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>Wrap report w/ revenue attribution</li><li style="font-size: 14px; color: var(--charcoal); display: flex; gap: 10px; line-height: 1.5;"><span style="color: var(--terra); flex-shrink: 0; margin-top: 1px;">→</span>Monthly strategy calls</li></ul><a href="checkout.html?package=momentum" style="display: inline-block; background: transparent; color: var(--charcoal); font-family: var(--sans); font-size: 14px; font-weight: 500; padding: 14px 28px; border-radius: 8px; text-decoration: none; letter-spacing: 0.01em; cursor: pointer; border: 1px solid rgba(28, 28, 28, 0.25); text-align: center;">Choose Momentum</a></div></div></section><section style="padding: max(60px, 8vh) max(24px, 5vw) max(80px, 10vh); max-width: 1100px; margin: 0px auto;"><div style="margin-bottom: 48px;"><span style="font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 14px; display: block;">Compare</span><h2 style="font-family: var(--serif); font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.02em; color: var(--charcoal); line-height: 1.1;">What’s in each tier.</h2></div><div style="overflow-x: auto;"><table style="width: 100%; border-collapse: collapse; font-family: var(--sans);"><thead><tr><th style="width: 36%; padding: 12px 16px 20px 0px; text-align: left; border-bottom: 1px solid rgba(28, 28, 28, 0.12);"></th><th style="padding: 12px 16px 20px; text-align: left; border-bottom: 1px solid rgba(28, 28, 28, 0.12); background: transparent; font-size: 13px; font-weight: 500; color: var(--charcoal); letter-spacing: 0.01em;">Starter</th><th style="padding: 12px 16px 20px; text-align: left; border-bottom: 2px solid var(--terra); background: rgba(184, 74, 62, 0.04); font-size: 13px; font-weight: 500; color: var(--terra); letter-spacing: 0.01em;">Foundation</th><th style="padding: 12px 16px 20px; text-align: left; border-bottom: 1px solid rgba(28, 28, 28, 0.12); background: transparent; font-size: 13px; font-weight: 500; color: var(--charcoal); letter-spacing: 0.01em;">Momentum</th></tr></thead><tbody><tr><td colspan="4" style="padding: 28px 0px 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone);">Core</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Price</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">$250</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">$650</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">$1,800</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Duration</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">1 week</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">6 weeks</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">90 days</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Payment</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">100% upfront</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">50/50 split</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">$900 + $450 + $450</td></tr><tr><td colspan="4" style="padding: 36px 0px 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone);">Strategy &amp; Positioning</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Kickoff call</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">30 min</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">45 min</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">60 min</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Positioning statement (3 options)</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: rgba(184, 74, 62, 0.04); font-weight: 500;">✓</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Bio rewrite</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: rgba(184, 74, 62, 0.04); font-weight: 500;">✓</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Audience profile</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">1 page</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">2 pages</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Content pillars</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Applied, not documented</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">4 pillars + examples</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">4 pillars + 90-day calendar</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Competitor positioning map</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: rgba(184, 74, 62, 0.04); font-weight: 500;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr><td colspan="4" style="padding: 36px 0px 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone);">Branding</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Color palette</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Applied, not documented</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">Primary + 2 support</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Full palette system</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Typography</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">2-font pairing</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Full type hierarchy</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Wordmark / logo treatment</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: rgba(184, 74, 62, 0.04); font-weight: 500;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Voice guidelines</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: rgba(184, 74, 62, 0.04); font-weight: 500;">✓</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Brand kit</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">3-page mini guide</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">8-page full mini-kit</td></tr><tr><td colspan="4" style="padding: 36px 0px 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone);">Content Production<span style="text-transform: none; letter-spacing: 0px; font-weight: 400; font-size: 11px; margin-left: 8px;">(editing only — client supplies footage)</span></td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Short-form edits (≤60s)</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">3 total</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">8 total</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">12 total</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Feed posts</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">4 total</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">9 total</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Story templates</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">6 templates</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Monthly refresh</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Captions, hook bank &amp; hashtag pack</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: rgba(184, 74, 62, 0.04); font-weight: 500;">✓</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Shot list / film guide</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">1 page</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Weekly refresh</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Revision rounds</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">1 per item</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">2 per item</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">2 per item</td></tr><tr><td colspan="4" style="padding: 36px 0px 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone);">System</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Link-in-bio page</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Basic build</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">Styled build</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Fully branded</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Email platform setup</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: rgba(184, 74, 62, 0.04); font-weight: 500;">✓</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Waitlist form</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: rgba(184, 74, 62, 0.04); font-weight: 500;">✓</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Welcome email flow</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">1 email</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">3-email flow</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Newsletter template</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: rgba(184, 74, 62, 0.04); font-weight: 500;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Newsletters sent</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: rgba(184, 74, 62, 0.04); font-weight: 500;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">6 (2/month)</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Privates inquiry form</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: rgba(184, 74, 62, 0.04); font-weight: 500;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Waitlist + privates funnels (forms + flows)</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: rgba(184, 74, 62, 0.04); font-weight: 500;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">2-email flow</td></tr><tr><td colspan="4" style="padding: 36px 0px 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone);">Communication</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Strategy calls (ongoing)</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: rgba(184, 74, 62, 0.04); font-weight: 500;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">3 × 45-min</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Day-45 checkpoint</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: rgba(184, 74, 62, 0.04); font-weight: 500;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--terra); background: transparent; font-weight: 400;">✓</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Reply time</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Email, 2 biz-day response</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">1 biz-day response + weekly async update</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Same-day response + weekly async update</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Handoff call</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">20 min</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">30 min</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">60 min</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Wrap report</td><td style="padding: 13px 16px; font-size: 14px; color: rgba(107, 102, 94, 0.45); background: transparent; font-weight: 400;">—</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">1-page</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">3-page w/ revenue attribution</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Delivery turnaround</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">5 biz days</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">3 biz days</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">2 biz days</td></tr><tr><td colspan="4" style="padding: 36px 0px 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone);">Trade &amp; Rights</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Case study rights</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Required</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">Required</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Optional</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Testimonial</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Required</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">Required</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Optional</td></tr><tr style="border-bottom: 1px solid rgba(28, 28, 28, 0.07);"><td style="padding: 13px 16px 13px 0px; font-size: 14px; color: var(--stone); width: 36%;">Asset ownership</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Client</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: rgba(184, 74, 62, 0.04); font-weight: 500;">Client</td><td style="padding: 13px 16px; font-size: 14px; color: var(--charcoal); background: transparent; font-weight: 400;">Client</td></tr></tbody></table></div><p style="font-size: 12px; color: var(--stone); line-height: 1.6; font-style: italic; margin-top: 28px; max-width: 680px;">All async support is working-hours only (Mon–Fri, 9am–6pm ET). We don’t do evening, weekend, or phone support at any tier — it’s how we stay sharp for the work that’s in scope.</p></section><section style="padding: max(64px, 8vh) max(24px, 5vw); border-top: 1px solid rgba(28, 28, 28, 0.1); max-width: 1100px; margin: 0px auto;"><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: start;"><div><span style="font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 14px; display: block;">ADDITIONAL SERVICES</span><h2 style="font-family: var(--serif); font-size: clamp(22px, 2.8vw, 32px); letter-spacing: -0.02em; color: var(--charcoal); line-height: 1.1; margin-bottom: 16px;">Not in these packages (but we do offer it).</h2><p style="font-size: 14px; color: var(--stone); line-height: 1.65; max-width: 420px;">These are services we offer as standalones. They’re not included in the packages above because most artists at this stage get more value from brand, content, and system first.</p></div><ul style="list-style: none;"><li style="font-size: 15px; color: var(--charcoal); padding: 14px 0px; border-bottom: 1px solid rgba(28, 28, 28, 0.08); display: flex; align-items: center; gap: 12px;"><span style="color: var(--stone); font-size: 12px;">—</span>Custom website builds</li><li style="font-size: 15px; color: var(--charcoal); padding: 14px 0px; border-bottom: 1px solid rgba(28, 28, 28, 0.08); display: flex; align-items: center; gap: 12px;"><span style="color: var(--stone); font-size: 12px;">—</span>Paid ads management (Meta, TikTok)</li><li style="font-size: 15px; color: var(--charcoal); padding: 14px 0px; border-bottom: 1px solid rgba(28, 28, 28, 0.08); display: flex; align-items: center; gap: 12px;"><span style="color: var(--stone); font-size: 12px;">—</span>Multi-platform content expansion (TikTok, YouTube Shorts)</li><li style="font-size: 15px; color: var(--charcoal); padding: 14px 0px; border-bottom: 1px solid rgba(28, 28, 28, 0.08); display: flex; align-items: center; gap: 12px;"><span style="color: var(--stone); font-size: 12px;">—</span>DM management and community moderation (automation available)</li><li style="font-size: 15px; color: var(--charcoal); padding: 14px 0px; border-bottom: 1px solid rgba(28, 28, 28, 0.08); display: flex; align-items: center; gap: 12px;"><span style="color: var(--stone); font-size: 12px;">—</span>Print and physical collateral</li><li style="padding: 18px 0px 0px; list-style: none;"><p style="font-size: 13px; color: var(--stone); line-height: 1.6; font-style: italic;">If one of these is actually what you need, tell us on the fit call and we’ll quote it separately.</p></li></ul></div></section><section style="padding: max(48px, 6vh) max(24px, 5vw); max-width: 1100px; margin: 0px auto;"><span style="font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 14px; display: block;">Add-ons</span><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 280px)); gap: 12px; margin-top: 24px; justify-content: center;"><div style="background: var(--white); border: 1px solid rgba(28, 28, 28, 0.08); border-radius: 10px; padding: 20px 22px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px;"><span style="font-size: 14px; color: var(--charcoal); line-height: 1.45;">Extra short-form edit</span><span style="font-family: var(--serif); font-size: 22px; color: var(--terra); flex-shrink: 0;">$75</span></div><div style="background: var(--white); border: 1px solid rgba(28, 28, 28, 0.08); border-radius: 10px; padding: 20px 22px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px;"><span style="font-size: 14px; color: var(--charcoal); line-height: 1.45;">Extra feed post</span><span style="font-family: var(--serif); font-size: 22px; color: var(--terra); flex-shrink: 0;">$40</span></div></div></section><section style="padding: max(64px, 8vh) max(24px, 5vw); border-top: 1px solid rgba(28, 28, 28, 0.1); max-width: 1100px; margin: 0px auto;"><span style="font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 14px; display: block;">Questions</span><h2 style="font-family: var(--serif); font-size: clamp(30px, 4vw, 52px); letter-spacing: -0.02em; color: var(--charcoal); line-height: 1.1; margin-bottom: 40px;">Common questions.</h2><div style="max-width: 680px;"><div style="border-bottom: 1px solid rgba(28, 28, 28, 0.1);"><button style="width: 100%; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; padding: 22px 0px; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-align: left;"><span style="font-family: var(--serif); font-size: clamp(17px, 2vw, 20px); color: var(--charcoal); line-height: 1.3;">Which package should I start with?</span><span style="color: var(--terra); font-size: 22px; flex-shrink: 0; line-height: 1; transform: rotate(0deg); transition: transform 0.25s; display: inline-block;">+</span></button><div style="overflow: hidden; max-height: 0px; transition: max-height 0.35s;"><p style="font-size: 15px; color: var(--stone); line-height: 1.7; padding-bottom: 24px;">If you’re under 1K followers and haven’t launched anything yet, Starter is the right move. It’s one week of triage. If you have an active class series, a workshop coming up, or an existing audience you’re not converting, Foundation is where to start. Momentum is for instructors who are ready to build a privates funnel and want a full system in place by the end of the engagement.</p></div></div><div style="border-bottom: 1px solid rgba(28, 28, 28, 0.1);"><button style="width: 100%; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; padding: 22px 0px; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-align: left;"><span style="font-family: var(--serif); font-size: clamp(17px, 2vw, 20px); color: var(--charcoal); line-height: 1.3;">Why don’t you offer monthly retainers?</span><span style="color: var(--terra); font-size: 22px; flex-shrink: 0; line-height: 1; transform: rotate(0deg); transition: transform 0.25s; display: inline-block;">+</span></button><div style="overflow: hidden; max-height: 0px; transition: max-height 0.35s;"><p style="font-size: 15px; color: var(--stone); line-height: 1.7; padding-bottom: 24px;">We’ve seen retainers turn into scope-creep disasters at this stage. Without a defined endpoint, it’s easy to keep tweaking things that don’t need tweaking. 90 days is long enough to see a real pattern, short enough to stay accountable.</p></div></div><div style="border-bottom: 1px solid rgba(28, 28, 28, 0.1);"><button style="width: 100%; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; padding: 22px 0px; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-align: left;"><span style="font-family: var(--serif); font-size: clamp(17px, 2vw, 20px); color: var(--charcoal); line-height: 1.3;">Do I own what you make?</span><span style="color: var(--terra); font-size: 22px; flex-shrink: 0; line-height: 1; transform: rotate(0deg); transition: transform 0.25s; display: inline-block;">+</span></button><div style="overflow: hidden; max-height: 0px; transition: max-height 0.35s;"><p style="font-size: 15px; color: var(--stone); line-height: 1.7; padding-bottom: 24px;">Yes. All assets — edits, brand files, copy, templates — are yours from the moment we hand them off. We keep working files for 90 days in case you need revisions, then delete them.</p></div></div><div style="border-bottom: 1px solid rgba(28, 28, 28, 0.1);"><button style="width: 100%; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; padding: 22px 0px; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-align: left;"><span style="font-family: var(--serif); font-size: clamp(17px, 2vw, 20px); color: var(--charcoal); line-height: 1.3;">Do you offer website builds or paid ads?</span><span style="color: var(--terra); font-size: 22px; flex-shrink: 0; line-height: 1; transform: rotate(0deg); transition: transform 0.25s; display: inline-block;">+</span></button><div style="overflow: hidden; max-height: 0px; transition: max-height 0.35s;"><p style="font-size: 15px; color: var(--stone); line-height: 1.7; padding-bottom: 24px;">Yes, just not inside these packages. Websites and ads are standalones we price per project. At under ~5K followers or pre-product-market-fit, most creators waste money on both. We’d rather build your brand and booking system first, then add paid traffic once there’s something worth pointing it at.</p></div></div><div style="border-bottom: 1px solid rgba(28, 28, 28, 0.1);"><button style="width: 100%; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; padding: 22px 0px; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-align: left;"><span style="font-family: var(--serif); font-size: clamp(17px, 2vw, 20px); color: var(--charcoal); line-height: 1.3;">Can you work with me if I’m not in Toronto?</span><span style="color: var(--terra); font-size: 22px; flex-shrink: 0; line-height: 1; transform: rotate(0deg); transition: transform 0.25s; display: inline-block;">+</span></button><div style="overflow: hidden; max-height: 0px; transition: max-height 0.35s;"><p style="font-size: 15px; color: var(--stone); line-height: 1.7; padding-bottom: 24px;">Yes. Everything is done remotely. We welcome artists all around the world!</p></div></div></div></section><section style="padding: max(80px, 12vh) max(24px, 5vw); background: var(--charcoal); text-align: center;"><p style="font-family: var(--serif); font-size: clamp(28px, 4vw, 52px); color: var(--cream); line-height: 1.2; max-width: 600px; margin: 0px auto 40px; letter-spacing: -0.02em; text-wrap: balance;">Not sure which tier? Book a 20-min fit call. We’ll tell you honestly.</p><a href="https://calendly.com/bachbchau/30-minute-meeting-with-chau-bach?month=2026-04" style="display: inline-block; background: var(--cream); color: var(--charcoal); font-family: var(--sans); font-size: 15px; font-weight: 500; padding: 14px 28px; border-radius: 8px; text-decoration: none; letter-spacing: 0.01em; cursor: pointer; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;">Book a fit call</a></section><footer style="padding: 28px max(24px, 5vw); background: var(--charcoal); border-top: 1px solid rgba(245, 240, 232, 0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;"><span style="font-family: var(--serif); font-size: 15px; color: var(--stone);">CHAU BACH — Toronto</span><span style="font-size: 12px; color: var(--stone);">© 2026</span></footer></main></div>
+<script type="text/babel">
+
+
+
+
+
+
+
+
+
+
+
+const { useState, useEffect } = React;
+
+const PACKAGES = [
+{
+  id: "starter",
+  name: "Starter",
+  outcome: "Gotta warm up!",
+  price: "$250",
+  duration: "1 week",
+  deliverables: [
+  "Positioning statement + bio rewrite",
+  "Link-in-bio rebuild with waitlist form",
+  "3 short-form edits",
+  "Captions + hashtag pack"],
+
+  cta: "Choose Starter",
+  ctaHref: "checkout.html?package=starter",
+  popular: false
+},
+{
+  id: "momentum",
+  name: "Foundation",
+  outcome: "Build your tempo.",
+  price: "$650",
+  originalPrice: "$750",
+  duration: "6 weeks",
+  deliverables: [
+  "3-page brand mini-guide",
+  "4 content pillars documented",
+  "8 short-form edits + 4 feed posts",
+  "Waitlist + welcome email setup",
+  "Wrap report"],
+
+  cta: "Choose Foundation",
+  ctaHref: "checkout.html?package=foundation",
+  popular: true
+},
+{
+  id: "growth",
+  name: "Momentum",
+  outcome: "Drills. Drills. Drills.",
+  price: "$1,800",
+  duration: "90 days",
+  deliverables: [
+  "Full 8-page brand mini-kit",
+  "4 content pillars + 90-day calendar",
+  "12 edits + 9 posts + 6 newsletters",
+  "Waitlist + welcome email flow",
+  "Privates booking flow",
+  "Wrap report w/ revenue attribution",
+  "Monthly strategy calls"],
+
+  cta: "Choose Momentum",
+  ctaHref: "checkout.html?package=momentum",
+  popular: false
+}];
+
+
+const TABLE_DATA = [
+{
+  section: "Core",
+  rows: [
+  { label: "Price", starter: "$250", momentum: "$650", growth: "$1,800" },
+  { label: "Duration", starter: "1 week", momentum: "6 weeks", growth: "90 days" },
+  { label: "Payment", starter: "100% upfront", momentum: "50/50 split", growth: "$900 + $450 + $450" }]
+
+},
+{
+  section: "Strategy & Positioning",
+  rows: [
+  { label: "Kickoff call", starter: "30 min", momentum: "45 min", growth: "60 min" },
+  { label: "Positioning statement (3 options)", starter: "\u2713", momentum: "\u2713", growth: "\u2713" },
+  { label: "Bio rewrite", starter: "\u2713", momentum: "\u2713", growth: "\u2713" },
+  { label: "Audience profile", starter: "\u2014", momentum: "1 page", growth: "2 pages" },
+  { label: "Content pillars", starter: "Applied, not documented", momentum: "4 pillars + examples", growth: "4 pillars + 90-day calendar" },
+  { label: "Competitor positioning map", starter: "\u2014", momentum: "\u2014", growth: "\u2713" }]
+
+},
+{
+  section: "Branding",
+  rows: [
+  { label: "Color palette", starter: "Applied, not documented", momentum: "Primary + 2 support", growth: "Full palette system" },
+  { label: "Typography", starter: "\u2014", momentum: "2-font pairing", growth: "Full type hierarchy" },
+  { label: "Wordmark / logo treatment", starter: "\u2014", momentum: "\u2014", growth: "\u2713" },
+  { label: "Voice guidelines", starter: "\u2014", momentum: "\u2713", growth: "\u2713" },
+  { label: "Brand kit", starter: "\u2014", momentum: "3-page mini guide", growth: "8-page full mini-kit" }]
+
+},
+{
+  section: "Content Production",
+  sectionNote: "editing only \u2014 client supplies footage",
+  rows: [
+  { label: "Short-form edits (\u226460s)", starter: "3 total", momentum: "8 total", growth: "12 total" },
+  { label: "Feed posts", starter: "\u2014", momentum: "4 total", growth: "9 total" },
+  { label: "Story templates", starter: "\u2014", momentum: "6 templates", growth: "Monthly refresh" },
+  { label: "Captions, hook bank & hashtag pack", starter: "\u2713", momentum: "\u2713", growth: "\u2713" },
+  { label: "Shot list / film guide", starter: "\u2014", momentum: "1 page", growth: "Weekly refresh" },
+  { label: "Revision rounds", starter: "1 per item", momentum: "2 per item", growth: "2 per item" }]
+
+},
+{
+  section: "System",
+  rows: [
+  { label: "Link-in-bio page", starter: "Basic build", momentum: "Styled build", growth: "Fully branded" },
+  { label: "Email platform setup", starter: "\u2014", momentum: "\u2713", growth: "\u2713" },
+  { label: "Waitlist form", starter: "\u2713", momentum: "\u2713", growth: "\u2713" },
+  { label: "Welcome email flow", starter: "\u2014", momentum: "1 email", growth: "3-email flow" },
+  { label: "Newsletter template", starter: "\u2014", momentum: "\u2014", growth: "\u2713" },
+  { label: "Newsletters sent", starter: "\u2014", momentum: "\u2014", growth: "6 (2/month)" },
+  { label: "Privates inquiry form", starter: "\u2014", momentum: "\u2014", growth: "\u2713" },
+  { label: "Waitlist + privates funnels (forms + flows)", starter: "\u2014", momentum: "\u2014", growth: "2-email flow" }]
+
+},
+{
+  section: "Communication",
+  rows: [
+  { label: "Strategy calls (ongoing)", starter: "\u2014", momentum: "\u2014", growth: "3 \u00d7 45-min" },
+  { label: "Day-45 checkpoint", starter: "\u2014", momentum: "\u2014", growth: "\u2713" },
+  { label: "Reply time", starter: "Email, 2 biz-day response", momentum: "1 biz-day response + weekly async update", growth: "Same-day response + weekly async update" },
+  { label: "Handoff call", starter: "20 min", momentum: "30 min", growth: "60 min" },
+  { label: "Wrap report", starter: "\u2014", momentum: "1-page", growth: "3-page w/ revenue attribution" },
+  { label: "Delivery turnaround", starter: "5 biz days", momentum: "3 biz days", growth: "2 biz days" }]
+
+},
+{
+  section: "Trade & Rights",
+  rows: [
+  { label: "Case study rights", starter: "Required", momentum: "Required", growth: "Optional" },
+  { label: "Testimonial", starter: "Required", momentum: "Required", growth: "Optional" },
+  { label: "Asset ownership", starter: "Client", momentum: "Client", growth: "Client" }]
+
+}];
+
+
+const FAQS = [
+{
+  q: "Which package should I start with?",
+  a: "If you\u2019re under 1K followers and haven\u2019t launched anything yet, Starter is the right move \u2014 it\u2019s one week of triage. If you have an active class series, a workshop coming up, or an existing audience you\u2019re not converting, Foundation is where to start. Momentum is for instructors who are ready to build a privates funnel and want a full system in place by the end of the engagement."
+},
+{
+  q: "Why don\u2019t you offer monthly retainers?",
+  a: "We\u2019ve seen retainers turn into scope-creep disasters at this stage. Without a defined endpoint, it\u2019s easy to keep tweaking things that don\u2019t need tweaking. 90 days is long enough to see a real pattern, short enough to stay accountable."
+},
+{
+  q: "Do I own what you make?",
+  a: "Yes. All assets \u2014 edits, brand files, copy, templates \u2014 are yours from the moment we hand them off. We keep working files for 90 days in case you need revisions, then delete them."
+},
+{
+  q: "Do you offer website builds or paid ads?",
+  a: "Yes \u2014 just not inside these packages. Websites and ads are standalones we price per project. At under ~5K followers or pre-product-market-fit, most creators waste money on both. We\u2019d rather build your brand and booking system first, then add paid traffic once there\u2019s something worth pointing it at."
+},
+{
+  q: "Can you work with me if I\u2019m not in Toronto?",
+  a: "Yes. Everything is done remotely."
+}];
+
+
+const NOT_INCLUDED = [
+"Custom website builds",
+"Paid ads management (Meta, TikTok)",
+"Multi-platform content expansion (TikTok, YouTube Shorts)",
+"DM management and community moderation (automation available)",
+"Print and physical collateral"];
+
+
+const ADDONS = [
+{ label: "Extra short-form edit", price: "$75" },
+{ label: "Extra feed post", price: "$40" }];
+
+
+// ─── SHARED STYLES ────────────────────────────────────────────────────────────
+
+const secLabel = {
+  fontFamily: "var(--sans)", fontSize: 11, fontWeight: 500,
+  letterSpacing: "0.08em", textTransform: "uppercase",
+  color: "var(--stone)", marginBottom: 14, display: "block"
+};
+const secHeading = {
+  fontFamily: "var(--serif)", fontSize: "clamp(30px,4vw,52px)",
+  letterSpacing: "-0.02em", color: "var(--charcoal)", lineHeight: 1.1
+};
+const btnFill = {
+  display: "inline-block", background: "var(--terra)", color: "var(--cream)",
+  fontFamily: "var(--sans)", fontSize: 15, fontWeight: 500,
+  padding: "14px 28px", borderRadius: 8, textDecoration: "none",
+  letterSpacing: "0.01em", cursor: "pointer", border: "none"
+};
+const btnLine = {
+  display: "inline-block", background: "transparent", color: "var(--charcoal)",
+  fontFamily: "var(--sans)", fontSize: 15, fontWeight: 400,
+  padding: "14px 0", textDecoration: "none",
+  borderBottom: "1px solid var(--charcoal)", letterSpacing: "0.01em"
+};
+
+// ─── NAV ─────────────────────────────────────────────────────────────────────
+
+function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const fn = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", fn);
+    return () => window.removeEventListener("scroll", fn);
+  }, []);
+  return (
+    <nav style={{
+      position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
+      padding: "0 max(24px, 5vw)", height: 60,
+      display: "flex", alignItems: "center", justifyContent: "space-between",
+      background: scrolled ? "rgb(240,240,240)" : "transparent",
+      backdropFilter: scrolled ? "blur(8px)" : "none",
+      WebkitBackdropFilter: scrolled ? "blur(8px)" : "none",
+      transition: "background 0.3s",
+      borderBottom: "none",
+      boxShadow: scrolled ? "0 1px 0 rgba(0,0,0,0.04)" : "none", color: "rgb(0, 0, 0)"
+    }}>
+      <span style={{ fontFamily: "var(--serif)", fontSize: 18, color: "var(--charcoal)" }}>CHAU BACH
+
+      </span>
+    </nav>);
+
+}
+
+// ─── HERO ─────────────────────────────────────────────────────────────────────
+
+function Hero() {
+  return (
+    <section style={{
+      minHeight: "92vh", display: "flex", flexDirection: "column", justifyContent: "flex-end",
+      padding: "max(100px,12vh) max(24px,5vw) max(64px,8vh)",
+      maxWidth: 1100, margin: "0 auto"
+    }}>
+      <div style={{ maxWidth: 720 }}>
+        <p style={secLabel}>Toronto &mdash; 2026</p>
+        <h1 style={{
+          fontFamily: "var(--serif)", fontSize: "clamp(40px,6vw,76px)",
+          lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--charcoal)",
+          marginBottom: 28, textWrap: "balance"
+        }}>Turn your movement into a brand dancers choose.
+
+        </h1>
+        <p style={{
+          fontSize: "clamp(16px,1.8vw,19px)", color: "var(--stone)",
+          lineHeight: 1.65, maxWidth: 560, marginBottom: 44, textWrap: "pretty"
+        }}>For dance teachers ready to grow their presence, fill their classes, and build something that's theirs. We handle the strategy, the content, and the systems.
+
+        </p>
+        <div style={{ display: "flex", gap: 20, flexWrap: "wrap", alignItems: "center" }}>
+          <a href="https://calendly.com/bachbchau/30-minute-meeting-with-chau-bach?month=2026-04" style={btnFill}>Book a 20-min fit call</a>
+          <a href="#packages" style={btnLine}>See how we work &darr;</a>
+        </div>
+      </div>
+    </section>);
+
+}
+
+// ─── CREDIBILITY ──────────────────────────────────────────────────────────────
+
+function CredibilityStrip() {
+  return (
+    <div style={{
+      borderTop: "1px solid rgba(28,28,28,0.1)",
+      borderBottom: "1px solid rgba(0,0,0,0.15)",
+      padding: "max(20px,2.5vh) max(24px,5vw)",
+      background: "var(--cream-deep)"
+    }}>
+      <p style={{
+        fontFamily: "var(--sans)", fontSize: 14, color: "var(--stone)",
+        lineHeight: 1.6, maxWidth: 900, margin: "0 auto", textAlign: "center"
+      }}>
+        
+      </p>
+    </div>);
+
+}
+
+// ─── PRICING CARDS ────────────────────────────────────────────────────────────
+
+function PricingCards({ cardStyle }) {
+  const [hovered, setHovered] = useState(null);
+  return (
+    <section id="packages" style={{ padding: "max(80px,10vh) max(24px,5vw)", maxWidth: 1100, margin: "0 auto" }}>
+      <div style={{ marginBottom: 56 }}>
+        <span style={secLabel}>Packages</span>
+        <h2 style={secHeading}>Three offers. Single outcome.</h2>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20, paddingTop: 28, alignItems: "start" }}>
+        {PACKAGES.map((pkg) => {
+          const bg = cardStyle === "cream" ? "var(--cream-deep)" : cardStyle === "outline" ? "transparent" : "var(--white)";
+          const border = pkg.popular ? "2px solid var(--terra)" : cardStyle === "outline" ? "1.5px solid rgba(0,0,0,0.5)" : "1.5px solid rgba(0,0,0,0.18)";
+          return (
+            <div key={pkg.id}
+            onMouseEnter={() => setHovered(pkg.id)}
+            onMouseLeave={() => setHovered(null)}
+            style={{
+              background: pkg.popular ? "var(--charcoal)" : bg, border: pkg.popular ? "none" : border, borderRadius: 12, padding: "36px 32px 32px",
+              display: "flex", flexDirection: "column", position: "relative",
+              height: "100%",
+              transition: "transform 0.2s", overflow: "visible",
+              transform: "none"
+            }}>
+              
+              <div style={{ marginBottom: 24 }}>
+                {pkg.popular &&
+                <span style={{
+                  position: "absolute", top: -16, left: 24,
+                  display: "inline-block",
+                  background: "var(--charcoal)", color: "var(--cream)",
+                  border: "1px solid rgba(255,255,255,0.35)",
+                  fontSize: 11, fontWeight: 500, letterSpacing: "0.06em",
+                  padding: "4px 12px", borderRadius: 20, fontFamily: "var(--sans)",
+                  whiteSpace: "nowrap"
+                }}>Recommended</span>
+                }
+                <p style={{ fontFamily: "var(--sans)", fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", color: pkg.popular ? "rgba(255,255,255,0.6)" : "var(--stone)", marginBottom: 10 }}>
+                  {pkg.name}
+                </p>
+                <p style={{ fontFamily: "var(--serif)", fontSize: "clamp(18px,2vw,22px)", lineHeight: 1.3, color: pkg.popular ? "var(--cream)" : "var(--charcoal)", textWrap: "balance" }}>
+                  {pkg.outcome}
+                </p>
+              </div>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
+                <span style={{ fontFamily: "var(--serif)", fontSize: 48, letterSpacing: "-0.03em", color: pkg.popular ? "var(--cream)" : "var(--charcoal)", lineHeight: 1 }}>{pkg.price}</span>
+                {pkg.originalPrice && <span style={{ fontFamily: "var(--serif)", fontSize: 24, color: pkg.popular ? "rgba(255,255,255,0.45)" : "var(--stone)", textDecoration: "line-through", lineHeight: 1 }}>{pkg.originalPrice}</span>}
+              </div>
+              <p style={{ fontSize: 13, color: pkg.popular ? "rgba(255,255,255,0.6)" : "var(--stone)", marginBottom: 28 }}>{pkg.duration}</p>
+              <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 11, marginBottom: 0, flexGrow: 1, paddingBottom: 28 }}>
+                {pkg.deliverables.map((d, i) =>
+                <li key={i} style={{ fontSize: 14, color: "var(--charcoal)", display: "flex", gap: 10, lineHeight: 1.5 }}>
+                    <span style={{ color: pkg.popular ? "rgba(255,255,255,0.5)" : "var(--terra)", flexShrink: 0, marginTop: 1 }}>&rarr;</span>
+                    <span style={{ color: pkg.popular ? "rgba(255,255,255,0.9)" : "var(--charcoal)" }}>{d}</span>
+                  </li>
+                )}
+              </ul>
+              <a href={pkg.ctaHref || "checkout.html"} style={{
+                ...btnFill,
+                marginTop: "auto",
+                background: pkg.popular ? "transparent" : "transparent",
+                color: pkg.popular ? "var(--cream)" : "var(--charcoal)",
+                border: pkg.popular ? "1px solid rgba(255,255,255,0.5)" : "1px solid rgba(28,28,28,0.25)",
+                textAlign: "center", fontSize: 14
+              }}>{pkg.cta}</a>
+            </div>);
+
+        })}
+      </div>
+    </section>);
+
+}
+
+// ─── COMPARISON TABLE ────────────────────────────────────────────────────────
+
+function ComparisonTable() {
+  const [activeTier, setActiveTier] = useState("momentum");
+  const [isWide, setIsWide] = useState(window.innerWidth >= 768);
+  useEffect(() => {
+    const fn = () => setIsWide(window.innerWidth >= 768);
+    window.addEventListener("resize", fn);
+    return () => window.removeEventListener("resize", fn);
+  }, []);
+
+  const tierIds = ["starter", "momentum", "growth"];
+  const tierLabels = ["Starter", "Foundation", "Momentum"];
+
+  return (
+    <section style={{ padding: "max(60px,8vh) max(24px,5vw) max(80px,10vh)", maxWidth: 1100, margin: "0 auto" }}>
+      <div style={{ marginBottom: 48 }}>
+        <span style={secLabel}>Compare</span>
+        <h2 style={secHeading}>What’s in each package.</h2>
+      </div>
+
+      {!isWide &&
+      <div style={{ display: "flex", gap: 8, marginBottom: 32, flexWrap: "wrap" }}>
+          {tierIds.map((tid, i) =>
+        <button key={tid} onClick={() => setActiveTier(tid)} style={{
+          fontFamily: "var(--sans)", fontSize: 13, fontWeight: 500,
+          padding: "8px 18px", borderRadius: 20, cursor: "pointer",
+          border: "1px solid " + (activeTier === tid ? "var(--terra)" : "rgba(28,28,28,0.18)"),
+          background: activeTier === tid ? "var(--terra)" : "transparent",
+          color: activeTier === tid ? "var(--cream)" : "var(--charcoal)",
+          transition: "all 0.2s"
+        }}>{tierLabels[i]}</button>
+        )}
+        </div>
+      }
+
+      <div style={{ overflowX: "auto" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--sans)" }}>
+          {isWide &&
+          <thead>
+              <tr>
+                <th style={{ width: "36%", padding: "12px 16px 20px 0", textAlign: "left", borderBottom: "1px solid rgba(28,28,28,0.12)" }} />
+                {tierIds.map((tid, i) =>
+              <th key={tid} style={{
+                padding: "12px 16px 20px", textAlign: "left",
+                borderBottom: tid === "momentum" ? "2px solid #000000" : "1px solid rgba(28,28,28,0.15)",
+                background: tid === "momentum" ? "#F5F5F3" : "transparent",
+                fontSize: 13, fontWeight: tid === "momentum" ? 600 : 500,
+                color: "var(--charcoal)",
+                letterSpacing: "0.01em"
+              }}>{tierLabels[i]}</th>
+              )}
+              </tr>
+            </thead>
+          }
+          <tbody>
+            {TABLE_DATA.map((section, si) =>
+            <React.Fragment key={si}>
+                <tr>
+                  <td colSpan={isWide ? 4 : 2} style={{
+                  padding: si === 0 ? "28px 0 8px" : "36px 0 8px",
+                  fontSize: 11, fontWeight: 500, letterSpacing: "0.08em",
+                  textTransform: "uppercase", color: "var(--stone)"
+                }}>
+                    {section.section}
+                    {section.sectionNote && <span style={{ textTransform: "none", letterSpacing: 0, fontWeight: 400, fontSize: 11, marginLeft: 8 }}>({section.sectionNote})</span>}
+                  </td>
+                </tr>
+                {section.rows.map((row, ri) =>
+              <tr key={ri} style={{ borderBottom: "1px solid rgba(28,28,28,0.07)" }}>
+                    <td style={{ padding: "13px 16px 13px 0", fontSize: 14, color: "var(--stone)", width: "36%" }}>{row.label}</td>
+                    {isWide ? tierIds.map((tid) =>
+                <td key={tid} style={{
+                  padding: "13px 16px", fontSize: 14,
+                  color: row[tid] === "\u2713" ? "var(--charcoal)" : row[tid] === "\u2014" ? "rgba(0,0,0,0.3)" : "var(--charcoal)",
+                  background: tid === "momentum" ? "#F5F5F3" : "transparent",
+                  fontWeight: tid === "momentum" ? 500 : 400
+                }}>{row[tid]}</td>
+                ) :
+                <td style={{
+                  padding: "13px 0 13px 16px", fontSize: 14,
+                  color: row[activeTier] === "\u2713" ? "var(--charcoal)" : row[activeTier] === "\u2014" ? "rgba(0,0,0,0.3)" : "var(--charcoal)",
+                  fontWeight: 500
+                }}>{row[activeTier]}</td>
+                }
+                  </tr>
+              )}
+              </React.Fragment>
+            )}
+          </tbody>
+        </table>
+      </div>
+      <p style={{ fontSize: 12, color: "var(--stone)", lineHeight: 1.6, fontStyle: "italic", marginTop: 28, maxWidth: 680 }}>
+        All async support is working-hours only (Mon&ndash;Fri, 9am&ndash;6pm ET). We don&rsquo;t do evening, weekend, or phone support at any tier &mdash; it&rsquo;s how we stay sharp for the work that&rsquo;s in scope.
+      </p>
+    </section>);
+
+}
+
+// ─── NOT INCLUDED ─────────────────────────────────────────────────────────────
+
+function NotIncluded() {
+  return (
+    <section style={{
+      padding: "max(64px,8vh) max(24px,5vw)",
+      borderTop: "1px solid rgba(28,28,28,0.1)",
+      maxWidth: 1100, margin: "0 auto"
+    }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px,1fr))", gap: 48, alignItems: "start" }}>
+        <div>
+          <span style={secLabel}>ADDITIONAL SERVICES</span>
+          <h2 style={{ ...secHeading, fontSize: "clamp(22px,2.8vw,32px)", marginBottom: 16 }}>Not in these packages
+(but we do offer it).</h2>
+          <p style={{ fontSize: 14, color: "var(--stone)", lineHeight: 1.65, maxWidth: 420 }}>These are services we offer as standalones. They’re not included in the packages above because most artists at this stage get more value from brand, content, and system first.
+
+          </p>
+        </div>
+        <ul style={{ listStyle: "none" }}>
+          {NOT_INCLUDED.map((item, i) => <li key={i} style={{
+            fontSize: 15, color: "var(--charcoal)",
+            padding: "14px 0", borderBottom: "1px solid rgba(28,28,28,0.08)",
+            display: "flex", alignItems: "center", gap: 12
+          }}>
+              <span style={{ color: "var(--stone)", fontSize: 12 }}>&mdash;</span>
+              {item}
+            </li>
+          )}
+          <li style={{ padding: "18px 0 0", listStyle: "none" }}>
+            <p style={{ fontSize: 13, color: "var(--stone)", lineHeight: 1.6, fontStyle: "italic" }}>
+              If one of these is actually what you need, tell us on the fit call and we&rsquo;ll quote it separately.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>);
+
+}
+
+// ─── ADD-ONS ──────────────────────────────────────────────────────────────────
+
+function AddOns() {
+  return (
+    <section style={{ padding: "max(48px,6vh) max(24px,5vw)", maxWidth: 1100, margin: "0 auto" }}>
+      <span style={secLabel}>Add-ons</span>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 280px))", gap: 12, marginTop: 24, justifyContent: "center" }}>
+        {ADDONS.map((item, i) =>
+        <div key={i} style={{
+          background: "#F5F5F3", border: "none", borderRadius: 10, boxShadow: "0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)",
+          padding: "20px 22px", display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12
+        }}>
+            <span style={{ fontSize: 14, color: "var(--charcoal)", lineHeight: 1.45 }}>{item.label}</span>
+            <span style={{ fontFamily: "var(--serif)", fontSize: 22, color: "var(--terra)", flexShrink: 0 }}>{item.price}</span>
+          </div>
+        )}
+      </div>
+    </section>);
+
+}
+
+// ─── FAQ ──────────────────────────────────────────────────────────────────────
+
+function FAQ() {
+  const [open, setOpen] = useState(null);
+  return (
+    <section style={{
+      padding: "max(64px,8vh) max(24px,5vw)",
+      borderTop: "1px solid rgba(28,28,28,0.1)",
+      maxWidth: 1100, margin: "0 auto"
+    }}>
+      <span style={secLabel}>HAVING TROUBLE?</span>
+      <h2 style={{ ...secHeading, marginBottom: 40 }}>Common questions.</h2>
+      <div style={{ maxWidth: 680 }}>
+        {FAQS.map((faq, i) =>
+        <div key={i} style={{ borderBottom: "1px solid rgba(28,28,28,0.1)" }}>
+            <button onClick={() => setOpen(open === i ? null : i)} style={{
+            width: "100%", background: "none", border: "none", cursor: "pointer",
+            padding: "22px 0", display: "flex", justifyContent: "space-between", alignItems: "center",
+            gap: 16, textAlign: "left"
+          }}>
+              <span style={{ fontFamily: "var(--serif)", fontSize: "clamp(17px,2vw,20px)", color: "var(--charcoal)", lineHeight: 1.3 }}>
+                {faq.q}
+              </span>
+              <span style={{
+              color: "var(--terra)", fontSize: 22, flexShrink: 0, lineHeight: 1,
+              transform: open === i ? "rotate(45deg)" : "rotate(0deg)",
+              transition: "transform 0.25s", display: "inline-block"
+            }}>+</span>
+            </button>
+            <div style={{
+            overflow: "hidden",
+            maxHeight: open === i ? 300 : 0,
+            transition: "max-height 0.35s ease"
+          }}>
+              <p style={{ fontSize: 15, color: "var(--stone)", lineHeight: 1.7, paddingBottom: 24 }}>
+                {faq.a}
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>);
+
+}
+
+// ─── FINAL CTA ────────────────────────────────────────────────────────────────
+
+function FinalCTA() {
+  return (
+    <section style={{
+      padding: "max(80px,12vh) max(24px,5vw)",
+      background: "var(--charcoal)", textAlign: "center"
+    }}>
+      <p style={{
+        fontFamily: "var(--serif)", fontSize: "clamp(28px,4vw,52px)",
+        color: "var(--cream)", lineHeight: 1.2, maxWidth: 600,
+        margin: "0 auto 40px", letterSpacing: "-0.02em", textWrap: "balance"
+      }}>Not sure which package?
+Book a 20-min fit call with us. 
+      </p>
+      <a href="https://calendly.com/bachbchau/30-minute-meeting-with-chau-bach?month=2026-04" style={{ ...btnFill, background: "var(--cream)", color: "var(--charcoal)" }}>
+        Book a fit call
+      </a>
+    </section>);
+
+}
+
+function Footer() {
+  return (
+    <footer style={{
+      padding: "28px max(24px,5vw)", background: "var(--charcoal)",
+      borderTop: "1px solid rgba(245,240,232,0.1)",
+      display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12, color: "rgb(255, 255, 255)"
+    }}>
+      <span style={{ fontFamily: "var(--serif)", fontSize: 15, color: "rgb(255, 255, 255)" }}>CHAU BACH — Toronto</span>
+      <span style={{ fontSize: 12, color: "var(--stone)" }}>&copy; 2026</span>
+    </footer>);
+
+}
+
+// ─── APP ──────────────────────────────────────────────────────────────────────
+
+function App() {
+  const [cardStyle, setCardStyle] = useState("default");
+
+  return (
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <CredibilityStrip />
+        <PricingCards cardStyle={cardStyle} />
+        <ComparisonTable />
+        <NotIncluded />
+        <AddOns />
+        <FAQ />
+        <FinalCTA />
+        <Footer />
+      </main>
+    </>);
+
+}
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accentColor": "#000000",
+  "baseColor": "#ffffff"
+} /*EDITMODE-END*/;
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" data-src-loc="32850:32911:33470">
+    <rect width="120" height="80" fill="#F5F0E8" data-src-loc="32916:32962"></rect>
+    <rect x="16" y="14" width="88" height="10" rx="3" fill="#1C1C1C" opacity="0.7" data-src-loc="32967:33047"></rect>
+    <rect x="16" y="30" width="55" height="5" rx="2" fill="#6B665E" opacity="0.5" data-src-loc="33052:33131"></rect>
+    <rect x="10" y="44" width="30" height="22" rx="4" fill="white" stroke="#B84A3E" strokewidth="1.5" data-src-loc="33136:33235"></rect>
+    <rect x="45" y="44" width="30" height="22" rx="4" fill="white" stroke="rgba(28,28,28,0.1)" strokewidth="1" data-src-loc="33240:33348"></rect>
+    <rect x="80" y="44" width="30" height="22" rx="4" fill="white" stroke="rgba(28,28,28,0.1)" strokewidth="1" data-src-loc="33353:33461"></rect>
+  </svg>
+</template>
+
+
+</body></html>

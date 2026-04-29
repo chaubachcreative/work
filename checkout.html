@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout — [TEAM_NAME]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+<script type="module" src="/src/main.tsx"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream: #FFFFFF;
+  --cream-deep: #F0F0F0;
+  --terra: #000000;
+  --charcoal: #000000;
+  --stone: #555555;
+  --white: #FFFFFF;
+  --green: #3A7A5A; --green-bg: #EBF4EF;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--charcoal); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+img, video, svg { max-width: 100%; }
+button, input, textarea, select { font: inherit; }
+body { overflow-x: hidden; }
+
+@media (max-width: 768px) {
+  html,
+  body,
+  #root,
+  #root > main {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  #root * {
+    min-width: 0 !important;
+  }
+
+  #root h1,
+  #root h2,
+  #root p,
+  #root span,
+  #root a,
+  #root button {
+    overflow-wrap: anywhere !important;
+  }
+
+  #root > nav {
+    height: auto !important;
+    min-height: 56px !important;
+    padding: 10px 16px !important;
+    gap: 14px !important;
+  }
+
+  #root > nav a:first-child {
+    font-size: 16px !important;
+  }
+
+  #root > nav a:last-child {
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    text-align: right !important;
+  }
+
+  #root > main {
+    padding: 88px 0 56px !important;
+    width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+
+  #root > main > div:first-child {
+    margin-bottom: 32px !important;
+  }
+
+  #root h1 {
+    font-size: clamp(34px, 11vw, 48px) !important;
+  }
+
+  #root form > div {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 34px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #root form > div > div:first-child {
+    gap: 32px !important;
+  }
+
+  #root form section h2 {
+    margin-bottom: 14px !important;
+  }
+
+  #root form section div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  #root form button,
+  #root form input,
+  #root form textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #root form > div > div,
+  #root form section {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #root form section button {
+    padding: 16px !important;
+  }
+
+  #root form section button > div:first-child {
+    min-width: 0 !important;
+  }
+
+  #root [style*="justify-content: space-between"] {
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+  }
+
+  #root form section button span {
+    overflow-wrap: anywhere !important;
+  }
+
+  #root form section button p,
+  #root form section button div {
+    min-width: 0 !important;
+  }
+
+  #root form > div > div:last-child > div {
+    position: static !important;
+    top: auto !important;
+  }
+
+  #root form > div > div:last-child {
+    order: -1 !important;
+  }
+
+  #root button[type="submit"] {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 15px 20px !important;
+  }
+
+  #root a,
+  #root button {
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  #root > nav {
+    align-items: flex-start !important;
+  }
+
+  #root > main {
+    padding-top: 82px !important;
+  }
+
+  #root form section button {
+    gap: 12px !important;
+  }
+
+  #root form section button[style*="justify-content: space-between"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  #root form section button[style*="justify-content: space-between"] > div:last-child {
+    align-items: flex-start !important;
+    width: 100% !important;
+  }
+
+  #root form section button > span {
+    line-height: 1.25 !important;
+  }
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+const { useState, useEffect } = React;
+
+const PACKAGES = [
+{
+  id: "starter",
+  name: "Starter",
+  price: 250,
+  duration: "1 week",
+  payment: "100% upfront",
+  schedule: [{ label: "Due on booking", amount: 250 }],
+  tagline: "Let\u2019s warm up!",
+  deliverables: [
+  "Positioning statement + bio rewrite",
+  "Link-in-bio rebuild with waitlist form",
+  "3 short-form edits",
+  "Captions, hook bank & hashtag pack"]
+
+},
+{
+  id: "foundation",
+  name: "Foundation",
+  price: 650,
+  duration: "6 weeks",
+  payment: "50% upfront, 50% at handoff",
+  tagline: "Drills. Drills. Drills.",
+  popular: true,
+  schedule: [{ label: "Due on booking", amount: 325 }, { label: "Due at handoff (week 6)", amount: 325 }],
+  deliverables: [
+  "3-page brand mini-guide",
+  "4 content pillars documented",
+  "8 short-form edits + 4 feed posts",
+  "Waitlist + welcome email setup",
+  "Wrap report"]
+
+},
+{
+  id: "momentum",
+  name: "Momentum",
+  price: 1800,
+  duration: "90 days",
+  payment: "$900 upfront, then $450 \u00d7 2",
+  schedule: [{ label: "Due on booking", amount: 900 }, { label: "Due at day 30", amount: 450 }, { label: "Due at day 60", amount: 450 }],
+  tagline: "Drills. Drills. Drills.",
+  deliverables: [
+  "Full 8-page brand mini-kit",
+  "4 content pillars + 90-day calendar",
+  "12 edits + 9 posts + 6 newsletters",
+  "Waitlist + welcome email flow",
+  "Privates booking flow",
+  "Wrap report w/ revenue attribution",
+  "Monthly strategy calls"]
+
+}];
+
+
+const PAYMENT_METHODS = [
+{
+  id: "etransfer",
+  label: "E-Transfer",
+  detail: "Send to bachbaochaau@gmail.com — use your name + package as the message.",
+  icon:
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect x="2" y="5" width="16" height="11" rx="2" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M2 8h16" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="6" cy="12" r="1" fill="currentColor" />
+      </svg>
+
+},
+{
+  id: "paypal",
+  label: "PayPal",
+  detail: "We’ll send you a PayPal invoice within 1 business day of receiving your form.",
+  icon:
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M6 4h5.5C13.4 4 15 5.3 15 7.2c0 2.3-1.8 3.8-4.3 3.8H9L8 15H5.5L6 4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M9 11l-.5 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+
+}];
+
+
+// Read ?package= from URL
+function getInitialPackage() {
+  const params = new URLSearchParams(window.location.search);
+  const p = params.get("package");
+  if (p && PACKAGES.find((pkg) => pkg.id === p)) return p;
+  return "foundation";
+}
+
+function Nav() {
+  return (
+    <nav style={{
+      position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
+      padding: "0 max(24px, 5vw)", height: 60,
+      display: "flex", alignItems: "center", justifyContent: "space-between",
+      background: "rgba(255,255,255,0.95)", backdropFilter: "blur(12px)",
+      borderBottom: "1px solid rgba(0,0,0,0.08)"
+    }}>
+      <a href="index.html" style={{ fontFamily: "var(--serif)", fontSize: 18, color: "var(--charcoal)", textDecoration: "none" }}>CHAU BACH
+
+      </a>
+      <a href="index.html" style={{ fontSize: 13, color: "var(--stone)", textDecoration: "none", fontWeight: 500 }}>
+        &larr; Back to packages
+      </a>
+    </nav>);
+
+}
+
+function PackageSelector({ selected, onChange }) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+      {PACKAGES.map((pkg) => {
+        const active = selected === pkg.id;
+        return (
+          <button key={pkg.id} onClick={() => onChange(pkg.id)} style={{
+            display: "flex", alignItems: "flex-start", justifyContent: "space-between",
+            gap: 16, padding: "18px 20px",
+            background: active ? "var(--white)" : "transparent",
+            border: active ? "2px solid var(--terra)" : "1px solid rgba(0,0,0,0.12)",
+            borderRadius: 10, cursor: "pointer", textAlign: "left",
+            transition: "all 0.15s"
+          }}>
+            <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+              <div style={{
+                width: 18, height: 18, borderRadius: "50%", flexShrink: 0, marginTop: 2,
+                border: active ? "5px solid var(--terra)" : "1.5px solid rgba(0,0,0,0.25)",
+                transition: "all 0.15s"
+              }} />
+              <div>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2 }}>
+                  <span style={{ fontFamily: "var(--sans)", fontSize: 14, fontWeight: 500, color: "var(--charcoal)" }}>
+                    {pkg.name}
+                  </span>
+                  {pkg.popular &&
+                  <span style={{
+                    fontSize: 10, fontWeight: 500, letterSpacing: "0.06em",
+                    background: "var(--terra)", color: "var(--cream)",
+                    padding: "2px 8px", borderRadius: 20, fontFamily: "var(--sans)"
+                  }}>Recommended</span>
+                  }
+                </div>
+                <span style={{ fontSize: 12, color: "var(--stone)" }}>{pkg.duration} &mdash; {pkg.payment}</span>
+              </div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", flexShrink: 0 }}>
+              {pkg.originalPrice && <span style={{ fontFamily: "var(--serif)", fontSize: 14, color: "var(--stone)", textDecoration: "line-through", lineHeight: 1 }}>${pkg.originalPrice.toLocaleString()}</span>}
+              <span style={{ fontFamily: "var(--serif)", fontSize: 22, color: active ? "var(--terra)" : "var(--charcoal)", lineHeight: 1.2 }}>${pkg.price.toLocaleString()}</span>
+            </div>
+          </button>);
+
+      })}
+    </div>);
+
+}
+
+function OrderSummary({ packageId, paymentMethod }) {
+  const pkg = PACKAGES.find((p) => p.id === packageId);
+  if (!pkg) return null;
+  const deposit = packageId === "starter" ? pkg.price : packageId === "foundation" ? pkg.price * 0.5 : 900;
+  return (
+    <div style={{
+      background: "var(--white)", border: "1px solid rgba(0,0,0,0.08)",
+      borderRadius: 12, padding: "28px 28px 24px", position: "sticky", top: 80
+    }}>
+      <p style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--stone)", marginBottom: 16 }}>
+        Order summary
+      </p>
+      <div style={{ marginBottom: 20 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 6 }}>
+          <span style={{ fontFamily: "var(--serif)", fontSize: 22, color: "var(--charcoal)" }}>{pkg.name}</span>
+          <span style={{ fontFamily: "var(--serif)", fontSize: 26, color: "var(--charcoal)" }}>${pkg.price.toLocaleString()}</span>
+        </div>
+        <p style={{ fontSize: 12, color: "var(--stone)" }}>{pkg.duration}</p>
+      </div>
+      <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8, marginBottom: 20, paddingBottom: 20, borderBottom: "1px solid rgba(0,0,0,0.08)" }}>
+        {pkg.deliverables.map((d, i) =>
+        <li key={i} style={{ fontSize: 13, color: "var(--charcoal)", display: "flex", gap: 8, lineHeight: 1.4 }}>
+            <span style={{ color: "var(--terra)", flexShrink: 0 }}>&rarr;</span>{d}
+          </li>
+        )}
+      </ul>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 6 }}>
+        <span style={{ fontSize: 13, color: "var(--stone)" }}>Due today</span>
+        <span style={{ fontFamily: "var(--serif)", fontSize: 20, color: "var(--terra)" }}>${deposit.toLocaleString()}</span>
+      </div>
+      <p style={{ fontSize: 11, color: "var(--stone)", lineHeight: 1.5 }}>{pkg.payment}</p>
+      {pkg.schedule && pkg.schedule.length > 1 && (
+        <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid rgba(0,0,0,0.08)" }}>
+          <p style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--stone)", marginBottom: 10 }}>Payment schedule</p>
+          {pkg.schedule.map((s, i) => (
+            <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", borderBottom: i < pkg.schedule.length - 1 ? "1px solid rgba(0,0,0,0.07)" : "none" }}>
+              <span style={{ fontSize: 12, color: "var(--stone)" }}>{s.label}</span>
+              <span style={{ fontFamily: "var(--serif)", fontSize: 14, color: "var(--charcoal)" }}>${s.amount.toLocaleString()}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {paymentMethod &&
+      <div style={{ marginTop: 20, paddingTop: 20, borderTop: "1px solid rgba(0,0,0,0.08)" }}>
+          <p style={{ fontSize: 12, color: "var(--stone)", lineHeight: 1.6 }}>
+            {PAYMENT_METHODS.find((m) => m.id === paymentMethod)?.detail}
+          </p>
+        </div>
+      }
+    </div>);
+
+}
+
+function Field({ label, id, type = "text", placeholder, value, onChange, required, hint, rows }) {
+  const isTextarea = type === "textarea";
+  const inputStyle = {
+    width: "100%", fontFamily: "var(--sans)", fontSize: 15,
+    padding: "12px 14px", borderRadius: 8, color: "var(--charcoal)",
+    border: "1px solid rgba(0,0,0,0.18)", background: "var(--white)",
+    outline: "none", transition: "border-color 0.15s",
+    resize: isTextarea ? "vertical" : undefined,
+    minHeight: isTextarea ? 100 : undefined
+  };
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+      <label htmlFor={id} style={{ fontSize: 13, fontWeight: 500, color: "var(--charcoal)" }}>
+        {label}{required && <span style={{ color: "var(--terra)", marginLeft: 3 }}>*</span>}
+      </label>
+      {hint && <p style={{ fontSize: 12, color: "var(--stone)", marginTop: -2 }}>{hint}</p>}
+      {isTextarea ?
+      <textarea id={id} rows={rows || 4} placeholder={placeholder} value={value} onChange={onChange} style={inputStyle} required={required} /> :
+      <input id={id} type={type} placeholder={placeholder} value={value} onChange={onChange} style={inputStyle} required={required} />
+      }
+    </div>);
+
+}
+
+function genId() {
+  return Math.random().toString(36).slice(2, 9) + Date.now().toString(36).slice(-4);
+}
+
+function saveBooking(booking) {
+  const all = JSON.parse(localStorage.getItem("tn_bookings") || "{}");
+  all[booking.id] = booking;
+  localStorage.setItem("tn_bookings", JSON.stringify(all));
+}
+
+function App() {
+  const [pkg, setPkg] = useState(getInitialPackage);
+  const [payMethod, setPayMethod] = useState("etransfer");
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [bookingId, setBookingId] = useState(null);
+  const [emailCopied, setEmailCopied] = useState(false);
+  const [form, setForm] = useState({
+    name: "", email: "", instagram: "", phone: "", goals: "", referral: ""
+  });
+
+  const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Generate booking ID
+    const id = genId();
+    const selectedPkg2 = PACKAGES.find(p => p.id === pkg);
+    // Save to localStorage (best effort)
+    try {
+      saveBooking({
+        id,
+        name: form.name, email: form.email, instagram: form.instagram,
+        phone: form.phone, goals: form.goals, referral: form.referral,
+        package: pkg, packageName: selectedPkg2.name, price: selectedPkg2.price,
+        duration: selectedPkg2.duration, paymentMethod: payMethod,
+        schedule: selectedPkg2.schedule.map(s => ({ ...s, paid: false, paidOn: null })),
+        deliverableStatus: {}, notes: [], files: [],
+        createdAt: new Date().toISOString(), status: "active",
+      });
+    } catch(err) { console.warn("localStorage unavailable", err); }
+    // Fire Formspree in background (no await)
+    try {
+      const scheduleText = selectedPkg2.schedule.map(s => s.label + ": $" + s.amount).join(" | ");
+      const fd = new FormData();
+      fd.append("name", form.name);
+      fd.append("email", form.email);
+      fd.append("instagram", form.instagram);
+      fd.append("phone", form.phone);
+      fd.append("goals", form.goals);
+      fd.append("referral", form.referral);
+      fd.append("package", selectedPkg2.name);
+      fd.append("package_price", "$" + selectedPkg2.price);
+      fd.append("payment_method", payMethod);
+      fd.append("payment_schedule", scheduleText);
+      fd.append("_subject", "New booking: " + selectedPkg2.name + " — " + form.name);
+      fd.append("_replyto", form.email);
+      fetch("https://formspree.io/f/xnjloggj", { method: "POST", body: fd, headers: { "Accept": "application/json" } })
+        .then(r => console.log("Formspree status:", r.status))
+        .catch(err => console.warn("Formspree error:", err));
+    } catch(err) {}
+    // Show confirmation immediately
+    setBookingId(id);
+    setSubmitted(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // Also store encoded booking in sessionStorage for same-session access
+    try { sessionStorage.setItem("tn_last_booking_id", id); } catch(e) {}
+  };
+
+  if (submitted) {
+    const selectedPkg = PACKAGES.find((p) => p.id === pkg);
+    return (
+      <>
+        <Nav />
+        <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "80px max(24px,5vw)" }}>
+          <div style={{ maxWidth: 520, textAlign: "center" }}>
+            <div style={{
+              width: 56, height: 56, borderRadius: "50%", background: "var(--terra)",
+              display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 28px",
+              color: "var(--cream)", fontSize: 24
+            }}>&#10003;</div>
+            <h1 style={{ fontFamily: "var(--serif)", fontSize: "clamp(28px,4vw,42px)", lineHeight: 1.15, marginBottom: 16, letterSpacing: "-0.02em" }}>
+              You&rsquo;re in. We&rsquo;ll be in touch within 1 business day.
+            </h1>
+            <p style={{ fontSize: 15, color: "var(--stone)", lineHeight: 1.7, marginBottom: 24 }}>
+              You&rsquo;ve reserved the <strong style={{ color: "var(--charcoal)" }}>{selectedPkg?.name}</strong> package. 
+              {payMethod === "etransfer" ?
+              " Send your e-transfer to bachbaochaau@gmail.com with your name and package as the message to confirm your spot." :
+              " We\u2019ll send a PayPal invoice to your email within 1 business day."}
+            </p>
+            {bookingId && (
+              <a href={(() => {
+                const b64 = btoa(JSON.stringify({ id: bookingId, name: form.name, email: form.email, instagram: form.instagram, phone: form.phone, goals: form.goals, referral: form.referral, package: pkg, packageName: PACKAGES.find(p=>p.id===pkg)?.name, price: PACKAGES.find(p=>p.id===pkg)?.price, duration: PACKAGES.find(p=>p.id===pkg)?.duration, paymentMethod: payMethod, schedule: (PACKAGES.find(p=>p.id===pkg)?.schedule||[]).map(s=>({...s,paid:false,paidOn:null})), deliverableStatus:{}, notes:[], files:[], createdAt: new Date().toISOString(), status:"active" }));
+                return `client_portal.html?booking=${bookingId}&d=${encodeURIComponent(b64)}`;
+              })()} style={{
+                display: "inline-block", background: "var(--terra)", color: "var(--cream)",
+                fontFamily: "var(--sans)", fontSize: 14, fontWeight: 500,
+                padding: "12px 24px", borderRadius: 8, textDecoration: "none", marginBottom: 28,
+              }}>
+                Open your client portal &rarr;
+              </a>
+            )}
+          </div>
+        </div>
+      </>);
+
+  }
+
+  return (
+    <>
+      <Nav />
+      <main style={{ maxWidth: 1060, margin: "0 auto", padding: "96px max(24px,5vw) 80px" }}>
+        <div style={{ marginBottom: 48 }}>
+          <p style={{ fontSize: 11, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--stone)", marginBottom: 12 }}>
+            Checkout
+          </p>
+          <h1 style={{ fontFamily: "var(--serif)", fontSize: "clamp(32px,4.5vw,56px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--charcoal)", textWrap: "balance" }}>
+            Let&rsquo;s get started.
+          </h1>
+        </div>
+
+        <form onSubmit={handleSubmit}>
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,380px)", gap: 48, alignItems: "start" }}>
+
+            {/* LEFT COLUMN */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
+
+              {/* Package selection */}
+              <section>
+                <h2 style={{ fontFamily: "var(--sans)", fontSize: 13, fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--stone)", marginBottom: 16 }}>
+                  1. Choose your package
+                </h2>
+                <PackageSelector selected={pkg} onChange={setPkg} />
+              </section>
+
+              {/* Your info */}
+              <section>
+                <h2 style={{ fontFamily: "var(--sans)", fontSize: 13, fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--stone)", marginBottom: 20 }}>
+                  2. Your info
+                </h2>
+                <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                    <Field label="Full name" id="name" placeholder="Chau Nguyen" value={form.name} onChange={set("name")} required />
+                    <Field label="Email" id="email" type="email" placeholder="you@example.com" value={form.email} onChange={set("email")} required />
+                  </div>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                    <Field label="Instagram handle" id="instagram" placeholder="@yourhandle" value={form.instagram} onChange={set("instagram")} required />
+                    <Field label="Phone number" id="phone" type="tel" placeholder="+1 416 000 0000" value={form.phone} onChange={set("phone")} />
+                  </div>
+                  <Field
+                    label="Where are you right now, and what are you trying to build?"
+                    id="goals" type="textarea" rows={5}
+                    placeholder="Tell us about your practice, your current audience, what’s working, what’s not, and what you’re hoping to achieve."
+                    value={form.goals} onChange={set("goals")} required />
+                  
+                  <Field label="How did you hear about us?" id="referral" placeholder="Instagram, a friend, a workshop…" value={form.referral} onChange={set("referral")} />
+                </div>
+              </section>
+
+              {/* Payment method */}
+              <section>
+                <h2 style={{ fontFamily: "var(--sans)", fontSize: 13, fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--stone)", marginBottom: 16 }}>
+                  3. Payment method
+                </h2>
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {PAYMENT_METHODS.map((method) => {
+                    const active = payMethod === method.id;
+                    return (
+                      <button key={method.id} type="button" onClick={() => setPayMethod(method.id)} style={{
+                        display: "flex", alignItems: "center", gap: 14, padding: "16px 20px",
+                        background: active ? "var(--white)" : "transparent",
+                        border: active ? "2px solid var(--terra)" : "1px solid rgba(0,0,0,0.12)",
+                        borderRadius: 10, cursor: "pointer", textAlign: "left", transition: "all 0.15s"
+                      }}>
+                        <div style={{
+                          width: 18, height: 18, borderRadius: "50%", flexShrink: 0,
+                          border: active ? "5px solid var(--terra)" : "1.5px solid rgba(0,0,0,0.25)",
+                          transition: "all 0.15s"
+                        }} />
+                        <span style={{ color: active ? "var(--terra)" : "var(--stone)", display: "flex" }}>{method.icon}</span>
+                        <div>
+                          <p style={{ fontSize: 14, fontWeight: 500, color: "var(--charcoal)", marginBottom: 2 }}>{method.label}</p>
+                          <p style={{ fontSize: 12, color: "var(--stone)", lineHeight: 1.5 }}>{method.detail}</p>
+                        </div>
+                      </button>);
+
+                  })}
+                </div>
+              </section>
+
+              {/* Submit */}
+              <div>
+                <button type="submit" style={{
+                  display: "inline-flex", alignItems: "center", gap: 10,
+                  background: "var(--terra)", color: "var(--cream)",
+                  fontFamily: "var(--sans)", fontSize: 16, fontWeight: 500,
+                  padding: "16px 36px", borderRadius: 8, border: "none",
+                  cursor: "pointer", letterSpacing: "0.01em", transition: "background 0.2s"
+                }}>
+                  Reserve my spot →
+                </button>
+                <p style={{ fontSize: 12, color: "var(--stone)", marginTop: 12, lineHeight: 1.5 }}>
+                  Submitting this form reserves your spot and kicks off our intake process. Payment is due within 48 hours to confirm.
+                </p>
+                <a href="index.html" style={{
+                  display: "inline-block", marginTop: 16, fontSize: 13, color: "var(--stone)",
+                  textDecoration: "none", borderBottom: "1px solid rgba(85,85,85,0.35)", paddingBottom: 2,
+                }}>&larr; Back to packages</a>
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN — sticky summary */}
+            <div>
+              <OrderSummary packageId={pkg} paymentMethod={payMethod} />
+            </div>
+          </div>
+        </form>
+      </main>
+    </>);
+
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#FFFFFF"/>
+    <rect x="10" y="18" width="60" height="6" rx="2" fill="#000000" opacity="0.6"/>
+    <rect x="10" y="30" width="55" height="12" rx="3" fill="white" stroke="#000000" strokeWidth="1.5"/>
+    <rect x="10" y="45" width="55" height="10" rx="3" fill="white" stroke="rgba(0,0,0,0.12)" strokeWidth="1"/>
+    <rect x="10" y="58" width="55" height="10" rx="3" fill="white" stroke="rgba(0,0,0,0.12)" strokeWidth="1"/>
+    <rect x="72" y="18" width="40" height="52" rx="6" fill="white" stroke="rgba(0,0,0,0.1)" strokeWidth="1"/>
+    <rect x="78" y="26" width="28" height="4" rx="1" fill="#000000" opacity="0.4"/>
+    <rect x="78" y="34" width="20" height="3" rx="1" fill="#555555" opacity="0.3"/>
+    <rect x="78" y="40" width="24" height="2" rx="1" fill="#555555" opacity="0.2"/>
+    <rect x="78" y="44" width="22" height="2" rx="1" fill="#555555" opacity="0.2"/>
+  </svg>
+</template>
+</body>
+</html>
