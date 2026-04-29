@@ -72,14 +72,44 @@ function setupMotion() {
     item.classList.add("motion-interactive");
   });
 
-  root.querySelectorAll<HTMLElement>(".card, section > div > div, form section button").forEach((item) => {
+  root.querySelectorAll<HTMLElement>(".card, div, button").forEach((item) => {
+    if (item.dataset.motionCardReady) return;
+
+    const styles = window.getComputedStyle(item);
+    const hasRoundedBorder = parseFloat(styles.borderRadius) >= 8 && styles.borderStyle !== "none";
+    const hasCardClass = item.classList.contains("card");
     const text = item.textContent?.trim() || "";
-    if (text.length > 12) item.classList.add("motion-card");
+
+    if ((hasCardClass || hasRoundedBorder) && text.length > 12) {
+      item.dataset.motionCardReady = "true";
+      item.classList.add("motion-card");
+    }
   });
 
   const revealItems = Array.from(
-    root.querySelectorAll<HTMLElement>("main > section, main > div, form section, table tr, footer"),
-  ).filter((item) => !item.dataset.motionReady);
+    root.querySelectorAll<HTMLElement>(
+      [
+        "main h1",
+        "main h2",
+        "main h3",
+        "main p",
+        "main li",
+        "main table tr",
+        "main label",
+        "main input",
+        "main textarea",
+        "main select",
+        "main .section-label",
+        "main .pill",
+        "main section > span",
+        "footer span",
+      ].join(", "),
+    ),
+  ).filter((item) => {
+    if (item.dataset.motionReady) return false;
+    if (item.closest("[style*='max-height: 0']")) return false;
+    return (item.textContent?.trim() || item.getAttribute("placeholder") || "").length > 0;
+  });
 
   revealItems.forEach((item, index) => {
     item.dataset.motionReady = "true";
