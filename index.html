@@ -31,6 +31,8 @@ body { background: var(--cream); color: var(--charcoal); font-family: var(--sans
 .pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-top: 28px; align-items: stretch; }
 .comparison-shell { width: 100%; max-width: 100%; overflow-x: hidden; }
 .comparison-table { width: 100%; border-collapse: collapse; font-family: var(--sans); table-layout: fixed; }
+.comparison-table th,
+.comparison-table td { overflow-wrap: anywhere; word-break: normal; vertical-align: top; }
 .comparison-row td { transition: background 180ms ease, color 180ms ease; }
 .comparison-section td { border-bottom: 1px solid rgba(0,0,0,0.08); }
 @media (hover: hover) and (pointer: fine) {
@@ -43,7 +45,7 @@ body { background: var(--cream); color: var(--charcoal); font-family: var(--sans
 }
 @media (max-width: 767px) {
   .comparison-shell { overflow-x: hidden; }
-  .comparison-table { table-layout: auto; }
+  .comparison-table { table-layout: fixed; }
 }
 </style>
 </head>

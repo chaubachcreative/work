@@ -94,7 +94,6 @@ function setupMotion() {
         "main h3",
         "main p",
         "main li",
-        "main table tr",
         "main label",
         "main input",
         "main textarea",
